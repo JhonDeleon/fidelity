@@ -1,0 +1,108 @@
+/**
+ *Name: Jhon Andelbert B. De Leon
+ * Section: Fidelity
+ * Year: 4th year
+ */
+
+import java.util.Scanner;
+public class jhon {
+    public static void main(String[] args) {
+        Scanner input =new Scanner(System.in);
+        int total = 0;
+        int again;
+        int food;
+        int snacks;
+        int loops = 0;
+        
+        
+        System.out.println("WELCOME TO MY HUMLBE STORE");
+            do{loops++;
+                System.out.println(" would you like to order? ");
+                System.out.println("1.Yes\t2.no");
+                int choice=input.nextInt();
+                
+             if (choice==1){
+                 System.out.println("choose your order");
+                 System.out.println("1.Foods\n2.Snacks\n3.Beverages");
+                 int option = input.nextInt();
+             
+           
+            switch (option){
+                case 1 -> { 
+                    System.out.println("1.Lumpia[10]\n2.chicken wings[15]");
+                    
+                    food=input.nextInt();
+                    
+                    if (food == 1){
+                        
+                        total += 10;
+                        System.out.println("You Ordered A Lumpia");
+                        System.out.println("Price of lumpia: "+ total);
+                        
+                    }
+                    else if (food ==2){
+                        total += 15;
+                        System.out.println("You Ordered A Chicken wings");
+                        System.out.println("Price of Chicken wings: "+total);
+                        
+                    }
+                    else {
+                        System.out.println("invalid input");
+                    }      }
+            
+                case 2 -> {
+                    
+                    System.out.println("1.pizza[85]\n2.burger[32]");
+                    snacks=input.nextInt();
+                    if(snacks==1){
+                        total += 85;
+                     System.out.println("You Ordered A Pizza");
+                        System.out.println("Price of pizza: "+total);
+                    }
+                    else if(snacks==2){
+                        total += 32;
+                       System.out.println("You Ordered A Burger");
+                        System.out.print("Price of burger: "+total);
+                    }
+                    else{
+                        System.out.println("Invalid input");
+                    }    
+                    }
+      
+            
+                case 3 -> {
+                    System.out.println("1.Lemon[15]\tt2.Coca Cola[30]");
+                     int bev = input.nextInt();
+                     if(bev==1)
+                     {
+                     total +=15;
+                         System.out.println("You Ordered A Lemon");
+                         System.out.println("Price of lemon juice: "+total);
+                     }
+                     else if(bev==2){
+                     total +=30;
+                         System.out.println("You Ordered A Coca Cola");
+                         System.out.println("Price of Coca cola: "+total);
+                     }
+                     else{
+                         System.out.println("Invalid input");
+                     }
+                    
+                }
+            }
+            again=1;
+             }
+            else{
+                   System.out.println("Invalido");
+                 System.out.println("Total Payment is: "+total);
+                System.out.println("Enter your cash: ");
+                int cash = input.nextInt();
+                int change = cash - total;
+                System.out.println("Your change is: "+change);
+                again = 0;
+             }
+            
+            }while(again == 1);
+            
+    }
+}

@@ -1,0 +1,45 @@
+package jhon;
+
+/**
+ *Name: Jhon Andelbert B. De Leon
+ *Section: Fidelity
+ *Year: 4th Year
+ */
+import java.util.Scanner;
+public class Jhon {
+
+    
+    public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+
+      
+        int grado;  
+        int choice;
+        int feedback;
+        int overAlltotal = 0;
+        int loops = 0;
+        int totalAve;
+        do{
+            System.out.print("Do you want to enter grade? [1-yes:2-no]");
+            choice = sc.nextInt();
+            if(choice==1){
+                System.out.println("Enter score to be calculated: ");
+                grado = sc.nextInt();
+               overAlltotal += grado;
+              loops++;
+              feedback = 1;
+            }
+            else{
+               feedback = 0;
+                 totalAve = overAlltotal / loops;
+                System.out.println("Grade Total Average: "+totalAve);
+               
+                
+            }
+                        
+        }while(feedback==1);
+     
+    
+    }
+    
+}
